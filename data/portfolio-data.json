@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "title": "Nayan - Full Stack Developer & Web3 Innovator",
+    "description": "Portfolio of Nayan, a Full Stack Developer, Web3 Innovator, and Agile Leader"
+  },
+  "header": {
+    "logo": {
+      "text": "N",
+      "fullName": "Nayan"
+    },
+    "navItems": [
+      { "name": "Home", "href": "#", "section": "hero" },
+      { "name": "Projects", "href": "#projects", "section": "projects" },
+      { "name": "Experience", "href": "#experience", "section": "experience" },
+      { "name": "Web3", "href": "#web3", "section": "web3" },
+      {
+        "name": "Certifications",
+        "href": "#certifications",
+        "section": "certifications"
+      },
+      { "name": "Contact", "href": "#contact", "section": "contact" }
+    ]
+  },
+  "hero": {
+    "tagline": "Full Stack Developer | Web3 Enthusiast | Quick Learner",
+    "name": "Nayan",
+    "description": "I craft high-performance applications with Next.js, React, and Web3 technologies, focusing on user experience and scalable architecture.",
+    "image": "/images/Linkedin_Profile.jpeg",
+    "buttons": [
+      {
+        "text": "View Projects",
+        "icon": "ArrowRight",
+        "href": "#projects",
+        "variant": "primary"
+      },
+      {
+        "text": "GitHub",
+        "icon": "Github",
+        "href": "https://github.com/2003nayan/",
+        "variant": "outline"
+      },
+      {
+        "text": "Contact Me",
+        "icon": null,
+        "href": "#contact",
+        "variant": "ghost"
+      }
+    ],
+    "techBadges": [
+      { "name": "Next.js", "position": "bottom-left" },
+      { "name": "Web3", "position": "top-right" }
+    ]
+  },
+  "projects": {
+    "title": "Projects that make an impact",
+    "subtitle": "Explore my recent work across web development and blockchain technologies, focused on performance and user experience.",
+    "items": [
+      {
+        "id": "creatorsbrain",
+        "title": "Creator's Brain",
+        "description": "An AI-powered SaaS platform for YouTube creators to analyze, optimize, and grow their content using advanced AI tools and insights.",
+        "tags": [
+          "Next.js",
+          "Clerk",
+          "Convex DB",
+          "Stripe",
+          "YouTube API",
+          "Claude 3.7"
+        ],
+        "metrics": [
+          "30%+ CTR improvement in early tests",
+          "5,000+ video analyses processed"
+        ],
+        "thumbnail": "/images/creatorsbrain.png",
+        "caseStudy": {
+          "problem": "YouTube creators often struggle with poor-performing videos, low engagement, and creative fatigue due to manual scripting, thumbnail design, and title optimization.",
+          "solution": "Built an AI-first SaaS product that reverse-engineers successful video strategies by using Claude 3.7 for intelligent content suggestions, YouTube API for real-time data, and Vercel AI SDK for interactive AI chat capabilities. Transcripts, thumbnails, and video reports are auto-generated to streamline content workflows.",
+          "impact": "Early testers report a 30% increase in video engagement and a 20% boost in subscriber growth."
+        },
+        "liveDemo": "https://creatorsbrain.vercel.app",
+        "githubRepo": "https://github.com/2003nayan/creatorsbrain"
+      },
+      {
+        "id": "collaborix",
+        "title": "Collaborix",
+        "description": "A real-time collaboration platform for remote teams, integrating AI-powered workflows and rich-text editing",
+        "tags": [
+          "Next.js",
+          "Clerk",
+          "Cloudflare Workers",
+          "Firestore",
+          "LiveBlocks"
+        ],
+        "metrics": [
+          "10,000+ concurrent users",
+          "42% reduction in meeting time"
+        ],
+        "thumbnail": "/images/collaborix-2.png",
+        "caseStudy": {
+          "problem": "Remote teams faced inefficiencies due to fragmented tools, leading to communication breakdowns, delayed project timelines, and reduced productivity across distributed work environments.",
+          "solution": "Developed a unified platform with real-time document editing, AI-driven workflow automation, and seamless user management using Next.js, Clerk for authentication, Cloudflare Workers for scalability, Firestore for real-time data, and Liveblocks for collaborative features.",
+          "impact": "Boosted team productivity by 40% and reduced project completion time by 25% for over 50 enterprise clients, as measured by user feedback and performance analytics."
+        },
+        "liveDemo": "https://collaborix.space/",
+        "githubRepo": "https://github.com/2003nayan/Collaborix"
+      },
+      {
+        "id": "nextblend",
+        "title": "NextBlend",
+        "description": "Performance-optimized design system built for Next.js applications",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "RazorPay Integration"
+        ],
+        "metrics": ["35% faster page loads", "Used by 20+ startups"],
+        "thumbnail": "/images/nextblend.png",
+        "caseStudy": {
+          "problem": "Developers were struggling with performance issues when implementing complex UI components in Next.js applications.",
+          "solution": "Created a lightweight, tree-shakable component library optimized specifically for Next.js with built-in performance monitoring.",
+          "impact": "Reduced average page load times by 35% and decreased bundle sizes by 42% across client applications."
+        },
+        "githubRepo": ""
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience & Skills",
+    "subtitle": "My professional journey and technical expertise in web development and blockchain technologies.",
+    "timeline": [
+      {
+        "id": "a14m",
+        "role": "Full Stack Developer",
+        "company": "AI4M Technologies",
+        "period": "June, 2024 - Present",
+        "description": "Developed and optimized web apps for 7+ clients using Next.js, ShadCN, and Tailwind CSS.",
+        "achievements": [
+          "Developed and optimized web apps for 7+ clients using Next.js, ShadCN, and Tailwind CSS",
+          "Integrated REST APIs and Firebase backend, improving data retrieval efficiency by 25%",
+          "Enhanced frontend security with OAuth and rate limiting, reducing authentication failures by 50%",
+          "Improved user retention by 30% through UX and performance enhancements"
+        ]
+      },
+      {
+        "id": "bayzcrypt",
+        "role": "Frontend Lead",
+        "company": "BayzCrypt",
+        "period": "Jan, 2024 - Jun, 2024",
+        "description": "Led frontend architecture and API integrations for a Web3 NFT marketplace serving 50K+ monthly active users.",
+        "achievements": [
+          "Managed frontend architecture and API integrations for a Web3 NFT marketplace with 50K+ MAUs",
+          "Designed and implemented a UI component library using Next.js and Tailwind CSS",
+          "Optimized Web3 wallet connections, increasing successful transactions by 35%",
+          "Handled sprint planning and code reviews, achieving 95% on-time delivery"
+        ]
+      }
+    ],
+    "skills": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Clerk",
+      "ConvexDB",
+      "NanoDB",
+      "Cloudflare",
+      "LiveBlocks",
+      "Solidity",
+      "Web3.js",
+      "Firebase",
+      "AWS",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Git & Github",
+      "Team Leadership",
+      "System Design"
+    ],
+    "leadership": [
+      "Sprint Planning",
+      "Code Reviews",
+      "Team Mentoring",
+      "CI/CD Pipeline",
+      "Agile Methodology",
+      "System Architecture"
+    ]
+  },
+  "web3": {
+    "title": "Web3 & Blockchain",
+    "subtitle": "Exploring the decentralized frontier with innovative blockchain solutions.",
+    "projectTitle": "BayzCrypt NFT Marketplace",
+    "projectDescription": "A mobile-optimized NFT marketplace built with React and Web3.js, featuring seamless wallet integration and an intuitive user experience.",
+    "metrics": [
+      "$10K+ in NFT trades processed",
+      "32% increase in mobile conversions",
+      "500+ unique wallet connections"
+    ],
+    "nfts": [
+      {
+        "id": "nft-1",
+        "name": "Cosmic Voyager #42",
+        "image": "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=400&h=400&q=80",
+        "price": "0.025 ETH"
+      },
+      {
+        "id": "nft-2",
+        "name": "Digital Dreamscape #17",
+        "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=400&q=80",
+        "price": "0.018 ETH"
+      },
+      {
+        "id": "nft-3",
+        "name": "Neon Genesis #103",
+        "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&h=400&q=80",
+        "price": "0.032 ETH"
+      },
+      {
+        "id": "nft5",
+        "name": "Crypto Punk #3872",
+        "price": "0.024 ETH",
+        "image": "https://images.unsplash.com/photo-1694434943114-c8ea2049f781?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "quantity": "1"
+      },
+      {
+        "id": "nft6",
+        "name": "Bored Ape #1267",
+        "price": "0.0182 ETH",
+        "image": "https://images.unsplash.com/photo-1643481437860-22f5a5e8fa58?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "quantity": "1"
+      },
+      {
+        "id": "nft7",
+        "name": "Azuki #5621",
+        "price": "0.038 ETH",
+        "image": "https://images.unsplash.com/photo-1663603846241-f29ca8b98622?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "quantity": 2
+      },
+      {
+        "id": "nft8",
+        "name": "Doodle #9142",
+        "price": "0.017 ETH",
+        "image": "https://images.unsplash.com/photo-1654792393225-3e8a53d124d2?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "quantity": "1"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications & Education",
+    "subtitle": "Continuous learning and professional development.",
+    "education": {
+      "degree": "B.Tech in AI & ML",
+      "institution": "Savitribai Phule Pune University",
+      "period": "2021 - 2025",
+      "highlights": [
+        "First Class with Distinction (8.7 CGPA)",
+        "Final Year Project: Result Analysis Platform",
+        "Vice-President: CoDE Club"
+      ]
+    },
+    "certificates": [
+      {
+        "id": "cert-1",
+        "name": "Voice Controller Car Publication",
+        "issuer": "International Journal of Innovative Research in Technology (IJIRT)",
+        "date": "Jun, 2023",
+        "image": "/images/ijirt.jpeg"
+      },
+      {
+        "id": "cert-2",
+        "name": "API 101 Using Postman",
+        "issuer": "Postman",
+        "date": "Apr, 2024",
+        "image": "/images/API_101_Postman.jpg"
+      },
+      {
+        "id": "cert-3",
+        "name": "Master Arrays & Problem Solving",
+        "issuer": "SoarX",
+        "date": "Mar, 2024",
+        "image": "/images/Master_Arrays.jpg"
+      },
+      {
+        "id": "cert-4",
+        "name": "Zero to Hero Python Bootcamp",
+        "issuer": "Udemy",
+        "date": "May, 2024",
+        "image": "/images/Python_udemy.jpg"
+      },
+      {
+        "id": "cert-5",
+        "name": "HTML Certification",
+        "issuer": "IITBs Spoken Tutorial",
+        "date": "2023",
+        "image": "/images/HTML_certificate.jpg"
+      },
+      {
+        "id": "cert-6",
+        "name": "Python Certification",
+        "issuer": "IITBs Spoken Tutorial",
+        "date": "2023",
+        "image": "/images/Python_certificate.jpg"
+      },
+      {
+        "id": "cert-7",
+        "name": "Java Certification",
+        "issuer": "IITBs Spoken Tutorial",
+        "date": "2023",
+        "image": "/images/Java_certificate.jpg"
+      },
+      {
+        "id": "cert-8",
+        "name": "C++ Certification",
+        "issuer": "IITBs Spoken Tutorial",
+        "date": "2023",
+        "image": "/images/CPP_certificate.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's work together",
+    "subtitle": "Have a project in mind or want to discuss opportunities? I'd love to hear from you.",
+    "email": "nayankatiyara03@gmail.com",
+    "location": "Pune, India",
+    "social": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/nayankatiyara/",
+        "icon": "Linkedin"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/2003nayan/",
+        "icon": "Github"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/NayanKatiyara",
+        "icon": "Twitter"
+      }
+    ],
+    "availability": [
+      "Full-stack developer roles",
+      "Web3 & blockchain related roles"
+    ]
+  },
+  "footer": {
+    "description": "Building scalable web & blockchain solutions with Next.js, React, and performance-first design.",
+    "copyright": "© 2025 Nayan. All rights reserved."
+  }
+}

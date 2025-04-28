@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 186 100% 50%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 186 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Canvas styles */
+.hero-canvas,
+.skill-cloud-canvas,
+.web3-visualizer-canvas {
+  @apply w-full h-full;
+}
+
+/* Terminal mode styles */
+.terminal-mode {
+  font-family: "Courier New", monospace;
+  color: #00ff00;
+  background-color: #000000;
+}
+
+.terminal-mode ::selection {
+  background-color: #00ff00;
+  color: #000000;
+}
+
+/* Custom styles for card flip effect */
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Improved button visibility */
+.btn-primary {
+  @apply bg-cyan-500 text-white hover:bg-cyan-600;
+}
+
+.btn-outline {
+  @apply border-cyan-500/30 text-cyan-400 hover:bg-slate-800;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-cyan-500/30 text-white;
+}
+
+/* Design elements */
+.highlight-box {
+  @apply relative;
+}
+
+.highlight-box::before {
+  content: "";
+  @apply absolute -inset-1 rounded-lg bg-gradient-to-r from-cyan-500 to-slate-700 opacity-30 blur-sm -z-10 transition-all duration-500;
+}
+
+.highlight-box:hover::before {
+  @apply opacity-50;
+}
+
+/* Animated underline */
+.animated-underline {
+  @apply relative;
+}
+
+.animated-underline::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300;
+}
+
+.animated-underline:hover::after {
+  @apply w-full;
+}
+
+/* Glow effect */
+.glow-on-hover {
+  @apply relative overflow-hidden;
+}
+
+.glow-on-hover::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0 -translate-x-full;
+  transition: transform 0.6s ease;
+}
+
+.glow-on-hover:hover::before {
+  @apply translate-x-full;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #164e63, #155e75);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: linear-gradient(to right, rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Terminal cursor animation */
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: #00ff00;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 3D scene loading styles */
+.loading-screen {
+  @apply fixed inset-0 flex items-center justify-center bg-slate-900 z-50;
+}
+
+.loading-progress {
+  @apply w-64 h-2 bg-slate-800 rounded-full overflow-hidden;
+}
+
+.loading-bar {
+  @apply h-full bg-cyan-500 transition-all duration-300;
+}
+
+/* Performance monitor styles */
+.performance-warning {
+  @apply fixed bottom-20 right-4 p-4 bg-amber-500/80 text-black rounded-lg backdrop-blur-sm z-50 text-sm;
+}
