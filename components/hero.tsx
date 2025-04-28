@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { gsap } from "gsap";
-import ThreeBackground from "@/components/three-background";
 import { getHeroData } from "@/lib/data";
 import * as LucideIcons from "lucide-react";
 
@@ -61,7 +60,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 z-0"></div>
 
       {/* Three.js Background */}
-      <ThreeBackground />
 
       {/* Geometric patterns */}
       <div className="absolute inset-0 opacity-10 z-0">
