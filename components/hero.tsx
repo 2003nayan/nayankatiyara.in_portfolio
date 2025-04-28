@@ -42,8 +42,14 @@ export default function Hero() {
   const renderIcon = (iconName: string | null) => {
     if (!iconName) return null;
 
-    const Icon = LucideIcons[iconName as keyof typeof LucideIcons];
-    return Icon ? <Icon className="ml-2 h-4 w-4" /> : null;
+    const renderIcon = (iconName: string | null) => {
+      if (!iconName) return null;
+
+      const Icon = LucideIcons[
+        iconName as keyof typeof LucideIcons
+      ] as React.FC<{ className?: string }>;
+      return <Icon className="ml-2 h-4 w-4" />;
+    };
   };
 
   return (
@@ -135,8 +141,8 @@ export default function Hero() {
                       button.variant === "primary"
                         ? "default"
                         : button.variant === "outline"
-                        ? "outline"
-                        : "ghost"
+                          ? "outline"
+                          : "ghost"
                     }
                     className={buttonClass}
                     onClick={() => {
