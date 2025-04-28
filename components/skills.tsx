@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
-import SkillCloud from "@/components/three/skill-cloud"
 import { useTerminalMode } from "@/hooks/use-terminal-mode"
 import { useAppStore } from "@/lib/store"
 
@@ -71,15 +70,6 @@ export default function Skills() {
           >
             Explore my technical skills and expertise in an interactive 3D visualization.
           </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative h-[500px] md:h-[600px] mb-12"
-        >
-          <SkillCloud />
         </motion.div>
 
         <motion.div
