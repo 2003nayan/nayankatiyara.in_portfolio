@@ -140,7 +140,8 @@
           "Integrated REST APIs and Firebase backend, improving data retrieval efficiency by 25%",
           "Enhanced frontend security with OAuth and rate limiting, reducing authentication failures by 50%",
           "Improved user retention by 30% through UX and performance enhancements"
-        ]
+        ],
+        "expanded": false
       },
       {
         "id": "bayzcrypt",
@@ -153,7 +154,8 @@
           "Designed and implemented a UI component library using Next.js and Tailwind CSS",
           "Optimized Web3 wallet connections, increasing successful transactions by 35%",
           "Handled sprint planning and code reviews, achieving 95% on-time delivery"
-        ]
+        ],
+        "expanded": false
       }
     ],
     "skills": [

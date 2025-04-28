@@ -1,24 +1,32 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { getExperienceData } from "@/lib/data"
+import { useState, useRef } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { getExperienceData } from "@/lib/data";
 
 export default function Experience() {
-  const experienceData = getExperienceData()
-  const [timeline, setTimeline] = useState(experienceData.timeline)
-  const sectionRef = useRef<HTMLElement>(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
+  const experienceData = getExperienceData();
+  const [timeline, setTimeline] = useState(experienceData.timeline);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const toggleExpand = (id: string) => {
-    setTimeline(timeline.map((item) => (item.id === id ? { ...item, expanded: !item.expanded } : item)))
-  }
+    setTimeline(
+      timeline.map((item) =>
+        item.id === id ? { ...item, expanded: !item.expanded } : item
+      )
+    );
+  };
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 md:py-32 relative overflow-hidden">
+    <section
+      id="experience"
+      ref={sectionRef}
+      className="py-24 md:py-32 relative overflow-hidden"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900 z-0"></div>
 
@@ -46,12 +54,19 @@ export default function Experience() {
           className="max-w-3xl mx-auto text-center mb-16 md:mb-24"
         >
           <div className="inline-block mb-4">
-            <Badge variant="outline" className="px-4 py-1 border-cyan-500/30 text-cyan-400 text-sm">
+            <Badge
+              variant="outline"
+              className="px-4 py-1 border-cyan-500/30 text-cyan-400 text-sm"
+            >
               MY JOURNEY
             </Badge>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{experienceData.title}</h2>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">{experienceData.subtitle}</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            {experienceData.title}
+          </h2>
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
+            {experienceData.subtitle}
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -74,7 +89,9 @@ export default function Experience() {
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                  animate={
+                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                  }
                   transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
                   className="mb-12 relative pl-12"
                 >
@@ -108,26 +125,28 @@ export default function Experience() {
                           </span>
                         ) : (
                           <span className="flex items-center">
-                            Show Achievements <ChevronDown className="ml-1 h-4 w-4" />
+                            Show Achievements{" "}
+                            <ChevronDown className="ml-1 h-4 w-4" />
                           </span>
                         )}
                       </Button>
-
-                      {item.expanded && (
-                        <motion.ul
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="mt-4 space-y-2 text-sm text-slate-300"
-                        >
-                          {item.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start">
-                              <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2"></div>
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
-                        </motion.ul>
-                      )}
+                      <AnimatePresence>
+                        {item.expanded && (
+                          <motion.ul
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="mt-4 space-y-2 text-sm text-slate-300"
+                          >
+                            {item.achievements.map((achievement, i) => (
+                              <li key={i} className="flex items-start">
+                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2"></div>
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </motion.ul>
+                        )}
+                      </AnimatePresence>
                     </div>
                   </div>
                 </motion.div>
@@ -158,7 +177,11 @@ export default function Experience() {
                   <motion.div
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                    animate={
+                      isInView
+                        ? { opacity: 1, scale: 1 }
+                        : { opacity: 0, scale: 0.8 }
+                    }
                     transition={{ delay: 0.5 + index * 0.03, duration: 0.3 }}
                     whileHover={{ scale: 1.05, color: "#22d3ee" }}
                     className="px-4 py-2 bg-slate-900 border border-slate-700 rounded-full text-slate-300 hover:border-cyan-500/50 transition-all duration-300"
@@ -181,7 +204,9 @@ export default function Experience() {
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
                   transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -198,5 +223,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
