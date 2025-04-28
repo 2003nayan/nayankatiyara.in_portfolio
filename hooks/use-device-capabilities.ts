@@ -48,9 +48,11 @@ export function useDeviceCapabilities() {
     // In a real app, you'd want to use more sophisticated detection
     let isHighPerformanceGPU = false
     if (isWebGLSupported && gl) {
-      const debugInfo = gl.getExtension("WEBGL_debug_renderer_info")
+      // Cast gl to WebGLRenderingContext to fix TypeScript errors
+      const webGLContext = gl as WebGLRenderingContext
+      const debugInfo = webGLContext.getExtension("WEBGL_debug_renderer_info")
       if (debugInfo) {
-        const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)
+        const renderer = webGLContext.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)
         isHighPerformanceGPU = !(renderer.includes("Intel") || renderer.includes("AMD") || isMobile)
       }
     }
@@ -58,8 +60,8 @@ export function useDeviceCapabilities() {
     // Battery status (if available)
     let isLowPowerMode = false
     if ("getBattery" in navigator) {
-      // @ts-ignore - getBattery is not in the TypeScript types
-      navigator.getBattery().then((battery: any) => {
+      // Use a proper type assertion for the Battery API
+      (navigator as any).getBattery().then((battery: any) => {
         isLowPowerMode = battery.level < 0.2 && !battery.charging
         setCapabilities((prev) => ({ ...prev, isLowPowerMode }))
       })
