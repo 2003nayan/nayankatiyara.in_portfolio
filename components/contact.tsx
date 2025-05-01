@@ -227,7 +227,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <p className="text-sm text-slate-400 mb-2">Social profiles</p>
                   <div className="flex gap-3">
                     {contactData.social.map((social, index) => (
@@ -243,7 +243,7 @@ export default function Contact() {
                       </motion.a>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

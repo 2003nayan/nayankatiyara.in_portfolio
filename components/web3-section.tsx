@@ -97,7 +97,11 @@ export default function Web3Section() {
                 className="border-cyan-500/30 text-cyan-400 hover:bg-slate-800 transition-transform hover:scale-105"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://bayzcrypt-black.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Project
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>

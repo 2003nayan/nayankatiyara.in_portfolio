@@ -198,7 +198,7 @@ export default function Projects() {
                 src={selectedProject.thumbnail}
                 alt={selectedProject.title || "Project"}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             )}
           </div>

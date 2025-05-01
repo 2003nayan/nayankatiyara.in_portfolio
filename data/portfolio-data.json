@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Nayan - Full Stack Developer & Web3 Innovator",
+    "title": "Nayan Katiyara's Portfolio",
     "description": "Portfolio of Nayan, a Full Stack Developer, Web3 Innovator, and Agile Leader"
   },
   "header": {
@@ -105,8 +105,8 @@
         "githubRepo": "https://github.com/2003nayan/Collaborix"
       },
       {
-        "id": "nextblend",
-        "title": "NextBlend",
+        "id": "motionui",
+        "title": "MotionUI",
         "description": "Performance-optimized design system built for Next.js applications",
         "tags": [
           "Next.js",
@@ -115,13 +115,14 @@
           "RazorPay Integration"
         ],
         "metrics": ["35% faster page loads", "Used by 20+ startups"],
-        "thumbnail": "/images/nextblend.png",
+        "thumbnail": "/images/motionui.png",
         "caseStudy": {
           "problem": "Developers were struggling with performance issues when implementing complex UI components in Next.js applications.",
           "solution": "Created a lightweight, tree-shakable component library optimized specifically for Next.js with built-in performance monitoring.",
           "impact": "Reduced average page load times by 35% and decreased bundle sizes by 42% across client applications."
         },
-        "githubRepo": ""
+        "liveDemo": "https://motion-ui-eight.vercel.app/",
+        "githubRepo": "https://github.com/2003nayan/MotionUI"
       }
     ]
   },
