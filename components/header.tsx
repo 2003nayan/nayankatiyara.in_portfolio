@@ -80,8 +80,11 @@ export default function Header() {
           ))}
           <Button
             className="bg-cyan-500 hover:bg-cyan-600 text-white ml-2"
-            onClick={() => 
-              window.open("https://drive.google.com/file/d/15ju8c1XVHSgNRxlUCXXD9Psh6NgbMpKz/view?usp=drive_link", "_blank")
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/17H0wc7EOPBypvlytBZUuBRNWCPxgs7WC/view?usp=sharing",
+                "_blank"
+              )
             }
           >
             Hire Me!
