@@ -14,11 +14,13 @@ export default function Experience() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   const toggleExpand = (id: string) => {
-    setTimeline(
-      timeline.map((item) =>
-        item.id === id ? { ...item, expanded: !item.expanded } : item
-      )
-    );
+    const updated = timeline.map((companyBlock) => ({
+      ...companyBlock,
+      roles: companyBlock.roles.map((role: any) =>
+        role.id === id ? { ...role, expanded: !role.expanded } : role
+      ),
+    }));
+    setTimeline(updated);
   };
 
   return (
@@ -70,6 +72,7 @@ export default function Experience() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
+          {/* Left - Timeline */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -82,78 +85,97 @@ export default function Experience() {
               Professional Timeline
             </h3>
 
-            <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-slate-500 to-slate-700"></div>
-
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={
-                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                  }
-                  transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
-                  className="mb-12 relative pl-12"
-                >
-                  <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center">
+            {timeline.map((companyBlock, blockIndex) => (
+              <div key={blockIndex} className="mb-10">
+                <h4 className="text-lg font-semibold text-cyan-300 mb-4 pl-12 relative">
+                  <span className="absolute left-0 top-1 w-8 h-8 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center">
                     <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
-                  </div>
+                  </span>
+                  {companyBlock.company}
+                </h4>
 
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/5 hover:border-cyan-500/30">
-                    <div className="p-6">
-                      <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
-                        <div>
-                          <h4 className="text-xl font-bold">{item.role}</h4>
-                          <p className="text-cyan-400">{item.company}</p>
-                        </div>
-                        <span className="px-3 py-1 bg-slate-900/50 rounded-full text-sm text-slate-300 border border-slate-700">
-                          {item.period}
-                        </span>
-                      </div>
+                <div className="relative">
+                  <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-slate-500 to-slate-700"></div>
 
-                      <p className="text-slate-300 mb-4">{item.description}</p>
+                  {companyBlock.roles.map((item, index) => (
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={
+                        isInView
+                          ? { opacity: 1, x: 0 }
+                          : { opacity: 0, x: -20 }
+                      }
+                      transition={{
+                        delay: 0.2 + index * 0.1,
+                        duration: 0.5,
+                      }}
+                      className="mb-12 relative pl-12"
+                    >
+                      {/* <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center">
+                        <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                      </div> */}
 
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-cyan-400 hover:text-cyan-300 hover:bg-slate-800 p-0 h-auto"
-                        onClick={() => toggleExpand(item.id)}
-                      >
-                        {item.expanded ? (
-                          <span className="flex items-center">
-                            Show Less <ChevronUp className="ml-1 h-4 w-4" />
-                          </span>
-                        ) : (
-                          <span className="flex items-center">
-                            Show Achievements{" "}
-                            <ChevronDown className="ml-1 h-4 w-4" />
-                          </span>
-                        )}
-                      </Button>
-                      <AnimatePresence>
-                        {item.expanded && (
-                          <motion.ul
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="mt-4 space-y-2 text-sm text-slate-300"
+                      <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/5 hover:border-cyan-500/30">
+                        <div className="p-6">
+                          <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
+                            <div>
+                              <h4 className="text-xl font-bold">{item.role}</h4>
+                            </div>
+                            <span className="px-3 py-1 bg-slate-900/50 rounded-full text-sm text-slate-300 border border-slate-700">
+                              {item.period}
+                            </span>
+                          </div>
+
+                          <p className="text-slate-300 mb-4">
+                            {item.description}
+                          </p>
+
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-cyan-400 hover:text-cyan-300 hover:bg-slate-800 p-0 h-auto"
+                            onClick={() => toggleExpand(item.id)}
                           >
-                            {item.achievements.map((achievement, i) => (
-                              <li key={i} className="flex items-start">
-                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2"></div>
-                                <span>{achievement}</span>
-                              </li>
-                            ))}
-                          </motion.ul>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                            {item.expanded ? (
+                              <span className="flex items-center">
+                                Show Less <ChevronUp className="ml-1 h-4 w-4" />
+                              </span>
+                            ) : (
+                              <span className="flex items-center">
+                                Show Achievements{" "}
+                                <ChevronDown className="ml-1 h-4 w-4" />
+                              </span>
+                            )}
+                          </Button>
+
+                          <AnimatePresence>
+                            {item.expanded && (
+                              <motion.ul
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="mt-4 space-y-2 text-sm text-slate-300"
+                              >
+                                {item.achievements.map((achievement, i) => (
+                                  <li key={i} className="flex items-start">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 mr-2"></div>
+                                    <span>{achievement}</span>
+                                  </li>
+                                ))}
+                              </motion.ul>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </motion.div>
 
+          {/* Right - Skills & Leadership */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}

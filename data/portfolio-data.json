@@ -9,16 +9,36 @@
       "fullName": "Nayan"
     },
     "navItems": [
-      { "name": "Home", "href": "#", "section": "hero" },
-      { "name": "Projects", "href": "#projects", "section": "projects" },
-      { "name": "Experience", "href": "#experience", "section": "experience" },
-      { "name": "Web3", "href": "#web3", "section": "web3" },
+      {
+        "name": "Home",
+        "href": "#",
+        "section": "hero"
+      },
+      {
+        "name": "Projects",
+        "href": "#projects",
+        "section": "projects"
+      },
+      {
+        "name": "Experience",
+        "href": "#experience",
+        "section": "experience"
+      },
+      {
+        "name": "Web3",
+        "href": "#web3",
+        "section": "web3"
+      },
       {
         "name": "Certifications",
         "href": "#certifications",
         "section": "certifications"
       },
-      { "name": "Contact", "href": "#contact", "section": "contact" }
+      {
+        "name": "Contact",
+        "href": "#contact",
+        "section": "contact"
+      }
     ]
   },
   "hero": {
@@ -47,8 +67,14 @@
       }
     ],
     "techBadges": [
-      { "name": "Next.js", "position": "bottom-left" },
-      { "name": "Web3", "position": "top-right" }
+      {
+        "name": "Next.js",
+        "position": "bottom-left"
+      },
+      {
+        "name": "Web3",
+        "position": "top-right"
+      }
     ]
   },
   "projects": {
@@ -114,7 +140,10 @@
           "Tailwind CSS",
           "RazorPay Integration"
         ],
-        "metrics": ["35% faster page loads", "Used by 20+ startups"],
+        "metrics": [
+          "35% faster page loads",
+          "Used by 20+ startups"
+        ],
         "thumbnail": "/images/motionui.png",
         "caseStudy": {
           "problem": "Developers were struggling with performance issues when implementing complex UI components in Next.js applications.",
@@ -131,32 +160,66 @@
     "subtitle": "My professional journey and technical expertise in web development and blockchain technologies.",
     "timeline": [
       {
-        "id": "a14m",
-        "role": "Full Stack Developer",
-        "company": "AI4M Technologies",
-        "period": "June, 2024 - Present",
-        "description": "Developed and optimized web apps for 7+ clients using Next.js, ShadCN, and Tailwind CSS.",
-        "achievements": [
-          "Developed and optimized web apps for 7+ clients using Next.js, ShadCN, and Tailwind CSS",
-          "Integrated REST APIs and Firebase backend, improving data retrieval efficiency by 25%",
-          "Enhanced frontend security with OAuth and rate limiting, reducing authentication failures by 50%",
-          "Improved user retention by 30% through UX and performance enhancements"
-        ],
-        "expanded": false
+        "company": "AI4M Technology Pvt. Ltd.",
+        "roles": [
+          {
+            "id": "a14m-dev",
+            "role": "Full Stack Developer",
+            "period": "May, 2025 - Present",
+            "description": "Working on full product cycles — from designing frontend flows to connecting backend systems and deploying them to production.",
+            "achievements": [
+              "Built and maintained production-ready dashboards for B2B clients using Next.js and PostgreSQL",
+              "Set up scalable authentication with Clerk and optimized secure login flows",
+              "Improved performance across 2 apps with dynamic routing and server-side rendering",
+              "Led QA testing efforts and implemented performance monitoring with Sentry and Vercel"
+            ],
+            "expanded": false
+          },
+          {
+            "id": "a14m-trainee",
+            "role": "Full Stack Trainee",
+            "period": "Oct, 2024 - May, 2025",
+            "description": "Expanded my skillset from frontend to full-stack by taking ownership of minor backend services, debugging, and integrations.",
+            "achievements": [
+              "Built and deployed internal tools using Node.js, Express, and Firebase",
+              "Integrated RESTful APIs with dynamic dashboard interfaces",
+              "Assisted in implementing role-based authentication using JWT and Clerk",
+              "Participated in sprint planning and contributed to internal DevOps automation scripts"
+            ],
+            "expanded": false
+          },
+          {
+            "id": "a14m-lead",
+            "role": "Frontend Intern",
+            "period": "June, 2024 - Oct, 2024",
+            "description": "Led frontend implementation across multiple client-facing projects, focusing on consistent UI systems and delivery quality.",
+            "achievements": [
+              "Redesigned 4 legacy interfaces using Next.js and Tailwind CSS to modern standards",
+              "Created a component-based UI library adopted across 3 teams to speed up development",
+              "Collaborated with design and backend teams to ensure pixel-perfect implementation",
+              "Mentored 2 junior developers and conducted weekly UI code reviews"
+            ],
+            "expanded": false
+          }
+        ]
       },
       {
-        "id": "bayzcrypt",
-        "role": "Frontend Lead",
         "company": "BayzCrypt",
-        "period": "Jan, 2024 - Jun, 2024",
-        "description": "Led frontend architecture and API integrations for a Web3 NFT marketplace serving 50K+ monthly active users.",
-        "achievements": [
-          "Managed frontend architecture and API integrations for a Web3 NFT marketplace with 50K+ MAUs",
-          "Designed and implemented a UI component library using Next.js and Tailwind CSS",
-          "Optimized Web3 wallet connections, increasing successful transactions by 35%",
-          "Handled sprint planning and code reviews, achieving 95% on-time delivery"
-        ],
-        "expanded": false
+        "roles": [
+          {
+            "id": "bayzcrypt",
+            "role": "Frontend Lead",
+            "period": "Jan, 2024 - Jun, 2024",
+            "description": "Led the frontend development of a Web3 NFT marketplace, ensuring responsive performance and seamless wallet interactions.",
+            "achievements": [
+              "Built and launched the MVP with a fully custom UI and reusable design system",
+              "Integrated Web3 wallet functionality using ethers.js, improving user onboarding",
+              "Reduced page load time by 40% using code splitting and image optimization",
+              "Managed team planning, code reviews, and coordination with smart contract developers"
+            ],
+            "expanded": false
+          }
+        ]
       }
     ],
     "skills": [
