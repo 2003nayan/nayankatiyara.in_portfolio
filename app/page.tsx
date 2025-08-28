@@ -1,11 +1,11 @@
-import Header from "@/components/header"
-import Hero from "@/components/hero"
-import Projects from "@/components/projects"
-import Experience from "@/components/experience"
-import Web3Section from "@/components/web3-section"
-import Certifications from "@/components/certifications"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
+import Experience from "@/components/experience";
+import Web3Section from "@/components/web3-section";
+import Certifications from "@/components/certifications";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -19,5 +19,5 @@ export default function Home() {
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }

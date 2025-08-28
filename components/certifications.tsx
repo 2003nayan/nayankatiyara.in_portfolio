@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Award, GraduationCap } from "lucide-react";
@@ -23,6 +23,13 @@ export default function Certifications() {
         (prev - 1 + certData.certificates.length) % certData.certificates.length
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % certData.certificates.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="certifications" className="py-20 bg-slate-800">
@@ -125,13 +132,6 @@ export default function Certifications() {
                         <motion.div
                           transition={{ duration: 0.6 }}
                           className="relative w-full h-64 cursor-pointer"
-                          onViewportEnter={() => {
-                            const timer = setTimeout(() => {
-                              const nextIndex = (activeIndex + 1) % certData.certificates.length;
-                              setActiveIndex(nextIndex);
-                            }, 3000);
-                            return () => clearTimeout(timer);
-                          }}
                         >
                           {/* Front of card */}
                           <div className="absolute inset-0 backface-hidden">

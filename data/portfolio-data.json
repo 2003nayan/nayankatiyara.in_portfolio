@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Nayan Katiyara's Portfolio",
+    "title": "Nayan Katiyara",
     "description": "Portfolio of Nayan, a Full Stack Developer, Web3 Innovator, and Agile Leader"
   },
   "header": {
@@ -140,10 +140,7 @@
           "Tailwind CSS",
           "RazorPay Integration"
         ],
-        "metrics": [
-          "35% faster page loads",
-          "Used by 20+ startups"
-        ],
+        "metrics": ["35% faster page loads", "Used by 20+ startups"],
         "thumbnail": "/images/motionui.png",
         "caseStudy": {
           "problem": "Developers were struggling with performance issues when implementing complex UI components in Next.js applications.",
@@ -320,7 +317,7 @@
       "institution": "Savitribai Phule Pune University",
       "period": "2021 - 2025",
       "highlights": [
-        "First Class with Distinction (8.7 CGPA)",
+        "First Class with Distinction (7.91 CGPA)",
         "Final Year Project: Result Analysis Platform",
         "Vice-President: CoDE Club"
       ]
@@ -328,55 +325,62 @@
     "certificates": [
       {
         "id": "cert-1",
+        "name": "Automated Result Analysis Platform Publication",
+        "issuer": "International Journal Of Data Science & Analytics (IJDSA)",
+        "date": "May, 2025",
+        "image": "/images/iaeme_certification.jpeg"
+      },
+      {
+        "id": "cert-2",
         "name": "Voice Controller Car Publication",
         "issuer": "International Journal of Innovative Research in Technology (IJIRT)",
         "date": "Jun, 2023",
         "image": "/images/ijirt.jpeg"
       },
       {
-        "id": "cert-2",
+        "id": "cert-3",
         "name": "API 101 Using Postman",
         "issuer": "Postman",
         "date": "Apr, 2024",
         "image": "/images/API_101_Postman.jpg"
       },
       {
-        "id": "cert-3",
+        "id": "cert-4",
         "name": "Master Arrays & Problem Solving",
         "issuer": "SoarX",
         "date": "Mar, 2024",
         "image": "/images/Master_Arrays.jpg"
       },
       {
-        "id": "cert-4",
+        "id": "cert-5",
         "name": "Zero to Hero Python Bootcamp",
         "issuer": "Udemy",
         "date": "May, 2024",
         "image": "/images/Python_udemy.jpg"
       },
       {
-        "id": "cert-5",
+        "id": "cert-6",
         "name": "HTML Certification",
         "issuer": "IITBs Spoken Tutorial",
         "date": "2023",
         "image": "/images/HTML_certificate.jpg"
       },
       {
-        "id": "cert-6",
+        "id": "cert-7",
         "name": "Python Certification",
         "issuer": "IITBs Spoken Tutorial",
         "date": "2023",
         "image": "/images/Python_certificate.jpg"
       },
       {
-        "id": "cert-7",
+        "id": "cert-8",
         "name": "Java Certification",
         "issuer": "IITBs Spoken Tutorial",
         "date": "2023",
         "image": "/images/Java_certificate.jpg"
       },
       {
-        "id": "cert-8",
+        "id": "cert-9",
         "name": "C++ Certification",
         "issuer": "IITBs Spoken Tutorial",
         "date": "2023",
